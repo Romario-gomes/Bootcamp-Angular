@@ -1,4 +1,35 @@
-html, body{
+:root{
+    --red:#E50914;  
+    --black:#141414;
+}
+
+*{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--black);
+    font-family: 'Times New Roman', Times, serif;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+header .logo{
+    margin-left: 5px;
+    color: var(--red);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+header nav a{
+    text-decoration:  none;
+    color: #aaa;
+    margin-right: 10px;
+}
+header nav a:hover{
+    color: #fff;
+    transition: 0.3s;
 }
