@@ -69,3 +69,4 @@ const totalWeightDogs =  pets
 }, 0)
 
 console.log(totalWeightDogs)
+
