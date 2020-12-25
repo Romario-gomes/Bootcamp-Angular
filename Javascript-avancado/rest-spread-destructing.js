@@ -139,7 +139,7 @@ function sum([a, b]= [0,0]){
 console.log(sum([undefined,5]));
 
 //functions objetcs
-function sum({a, b}= {a=0, b=0}){
+function sum({a, b}){
     return a+b;
 }
 console.log(sum({a:undefined,b:5}));
