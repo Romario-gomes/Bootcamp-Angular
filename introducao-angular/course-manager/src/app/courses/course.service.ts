@@ -4,7 +4,6 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
 import { CourseInfoComponent } from "./course-info.component";
-import { url } from "inspector";
 @Injectable({
     providedIn: 'root'
 })
