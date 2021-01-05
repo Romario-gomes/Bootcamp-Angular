@@ -19,8 +19,8 @@ export class CourseListComponent implements OnInit {
     }
     retrieveAll(): void{
         this.courseService.retriveAll().subscribe({
-            next: courses =>{
-                this._courses
+            next: courses => {
+                this._courses = courses;
                 this.filteredCourses = this._courses;
             },
             error: err => console.log('Error', err)
