@@ -1,1 +1,8 @@
-<p>input-number works!</p>
+<div [formGroup]="formGroup">
+    <mat-form-field class="full-width">
+    <input matInput [placeholder]="titulo" [name]="controlName" type="number" [min]="minimo" [max]="maximo" step="step" [formControlName]="controlName">
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'min')">Campo precisa ser maior ou igual {{ validacao.lengthValidar(formControl, 'min')}}</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'max')">Campo precisa ser menor ou igual a {{ validacao.lengthValidar(formControl, 'max')}}</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'required')">Campo obrigatório</mat-error>
+  </mat-form-field>
+</div>
