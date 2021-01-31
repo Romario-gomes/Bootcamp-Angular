@@ -109,6 +109,16 @@
       "urlIMDb": "https://www.imdb.com/title/tt2527338/?ref_=vi_md_ti",
       "genero": "Aventura",
       "id": 11
+    },
+    {
+      "titulo": "Breaking Bad ",
+      "urlFoto": "https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR5,0,182,268_AL_.jpg",
+      "dtLancamento": "2008-01-24T02:00:00.000Z",
+      "descricao": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+      "nota": 9.5,
+      "urlIMDb": "https://www.imdb.com/title/tt0903747/?ref_=hm_fanfav_tt_13_pd_fp1",
+      "genero": "Ação",
+      "id": 12
     }
   ]
 }
