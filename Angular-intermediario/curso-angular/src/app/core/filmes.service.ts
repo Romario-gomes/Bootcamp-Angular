@@ -10,12 +10,12 @@ const url = 'http://localhost:3000/filmes/';
   providedIn: 'root'
 })
 export class FilmesService {
-
-
   constructor(private http: HttpClient) { }
 
   salvar(filme: Filme): Observable<Filme> {
     return this.http.post<Filme>(url, filme);
   }
-
+  listar(): Observable<Filme[]> {
+    return this.http.get<Filme[]>(url);
+  }
 }
