@@ -3,13 +3,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { FilmesService } from 'src/app/core/filmes.service';
 import { ConfigParams } from 'src/app/shared/models/config-params';
 import { Filme } from 'src/app/shared/models/filme';
-
+import { debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'dio-listagem-filmes',
   templateUrl: './listagem-filmes.component.html',
   styleUrls: ['./listagem-filmes.component.scss']
 })
 export class ListagemFilmesComponent implements OnInit {
+  readonly semFoto = 'https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cindra/imagens/sem.jpg.gif/image'
   config: ConfigParams = {
     pagina: 0,
     limite: 4 
@@ -26,7 +27,9 @@ export class ListagemFilmesComponent implements OnInit {
       texto: [''],
       genero: ['']
     });
-    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
+    this.filtrosListagem.get('texto').valueChanges
+      .pipe(debounceTime(400))
+      .subscribe((val: string) => {
       this.config.pesquisa = val;
       this.resetarConsulta();
 
